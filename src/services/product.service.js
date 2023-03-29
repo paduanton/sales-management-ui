@@ -19,7 +19,45 @@ const storeProductType = (description, taxPercentage)  => {
   });
 };
 
+const storeProduct = (name, price, productTypeId )  => {
+  return axios.post(`${SALES_MANAGEMENT_API}/product`,
+    {
+      name,
+      price,
+      product_type_id: productTypeId
+    },
+  )
+  .then((response) => {
+    const { name, price, product_type_id, id } = response.data;
+    return {
+      id,
+      name,
+      price,
+      productTypeId: product_type_id
+    };
+  });
+};
 
+const getProducts = ()  => {
+  return axios.get(`${SALES_MANAGEMENT_API}/product`, 
+  )
+  .then((response) => {
+    const products = response.data;
+
+    const parsedProduct = products.map((product) => {
+      const { name, price, product_type_id, id } = product;
+      
+      return {
+        id,
+        name,
+        price,
+        productTypeId: product_type_id
+      };
+    });
+
+    return parsedProduct;
+  });
+};
 
 const getProductTypes = ()  => {
   return axios.get(`${SALES_MANAGEMENT_API}/product_type`, 
@@ -42,6 +80,8 @@ const getProductTypes = ()  => {
 };
 
 export default {
+  getProducts,
+  storeProduct,
   storeProductType,
   getProductTypes,
 };

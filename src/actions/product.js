@@ -17,3 +17,16 @@ export const storeProductType = (description, taxPercentage) => (dispatch) => {
     }
   );
 };
+
+export const storeProduct = (name, price, productTypeId )  => (dispatch) => {
+  return ProductService.storeProduct(name, price, productTypeId ) .then(
+    (response) => {  
+      return Promise.resolve();
+    },
+    (error) => {
+      console.log(error);
+
+      return Promise.reject();
+    }
+  );
+};

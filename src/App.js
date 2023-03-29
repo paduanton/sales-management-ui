@@ -13,6 +13,7 @@ import Signup from "./Pages/Signup";
 import Feed from "./Pages/Feed";
 import Profile from "./Pages/Profile";
 import ProductType from "./Pages/ProductType";
+import Product from "./Pages/Product";
 
 
 import { logout } from "./actions/auth";
@@ -64,6 +65,7 @@ const App = () => {
           <Route path="/" element={<Feed />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/product_type" element={<ProductType />} />
+          <Route path="/product" element={<Product />} />
         </Routes>
       </div>
 

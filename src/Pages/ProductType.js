@@ -79,7 +79,7 @@ const ProductType = () => {
       <Container className="mt-4">
           <Row className="d-flex justify-content-center">
           {productTypesData ? productTypesData.map((productType, index) => (
-            <Card key={`card-article-${index}`}style={{ width: '18rem' }} className="pt-4 m-1">
+            <Card key={`card-product-type-${index}`}style={{ width: '18rem' }} className="pt-4 m-1">
               <Card.Body>
                 <ListGroup variant="flush">
                   <ListGroup.Item>Description: {productType.description}</ListGroup.Item>

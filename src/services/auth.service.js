@@ -1,8 +1,8 @@
 import axios from "axios";
-import { NEWS_API_BASE_URL, authenticationHeader } from "./env";
+import { SALES_MANAGEMENT_API, authenticationHeader } from "./env";
 
 const signup = (name, username, email, password, rememberMe)  => {
-  return axios.post(`${NEWS_API_BASE_URL}/signup`, {
+  return axios.post(`${SALES_MANAGEMENT_API}/signup`, {
     name,
     username,
     email,
@@ -17,7 +17,7 @@ const signup = (name, username, email, password, rememberMe)  => {
 
 const login = (email, password, rememberMe) => {
   return axios
-    .post(`${NEWS_API_BASE_URL}/login`, {
+    .post(`${SALES_MANAGEMENT_API}/login`, {
       email,
       password,
       remember_me: rememberMe,
@@ -30,7 +30,7 @@ const login = (email, password, rememberMe) => {
 
 const logout = () => {
   return axios
-    .post(`${NEWS_API_BASE_URL}/logout`, 
+    .post(`${SALES_MANAGEMENT_API}/logout`, 
     {},  
     { 
       headers: authenticationHeader()

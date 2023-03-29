@@ -12,6 +12,8 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Feed from "./Pages/Feed";
 import Profile from "./Pages/Profile";
+import ProductType from "./Pages/ProductType";
+
 
 import { logout } from "./actions/auth";
 
@@ -35,7 +37,7 @@ const App = () => {
     <div>
       <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="/">News Feed App</Navbar.Brand>
+        <Navbar.Brand href="/">Sales Management App</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
@@ -61,9 +63,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Feed />} />
           <Route path="/feed" element={<Feed />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/product_type" element={<ProductType />} />
         </Routes>
       </div>
 

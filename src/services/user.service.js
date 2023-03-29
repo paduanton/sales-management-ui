@@ -1,8 +1,8 @@
 import axios from "axios";
-import { NEWS_API_BASE_URL, authenticationHeader } from "./env";
+import { SALES_MANAGEMENT_API, authenticationHeader } from "./env";
 
 const getUser = (id)  => {
-  return axios.get(`${NEWS_API_BASE_URL}/users/${id}`, 
+  return axios.get(`${SALES_MANAGEMENT_API}/users/${id}`, 
     { 
       headers: authenticationHeader()
     }

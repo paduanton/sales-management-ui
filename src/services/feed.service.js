@@ -1,8 +1,8 @@
 import axios from "axios";
-import { NEWS_API_BASE_URL, authenticationHeader } from "./env";
+import { SALES_MANAGEMENT_API, authenticationHeader } from "./env";
 
 const deleteFeedPreference = (id)  => {
-  return axios.delete(`${NEWS_API_BASE_URL}/feed_preferences/${id}`, 
+  return axios.delete(`${SALES_MANAGEMENT_API}/feed_preferences/${id}`, 
     { 
       headers: authenticationHeader()
     }
@@ -10,7 +10,7 @@ const deleteFeedPreference = (id)  => {
 };
 
 const storeFeedPreference = (userId, content, type)  => {
-  return axios.post(`${NEWS_API_BASE_URL}/users/${userId}/feed_preferences`,
+  return axios.post(`${SALES_MANAGEMENT_API}/users/${userId}/feed_preferences`,
     {
       content,
       type
@@ -32,7 +32,7 @@ const storeFeedPreference = (userId, content, type)  => {
 
 
 const getUserFeedPreferences = (id)  => {
-  return axios.get(`${NEWS_API_BASE_URL}/users/${id}/feed_preferences`, 
+  return axios.get(`${SALES_MANAGEMENT_API}/users/${id}/feed_preferences`, 
     { 
       headers: authenticationHeader()
     }

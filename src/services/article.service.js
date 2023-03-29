@@ -1,5 +1,5 @@
 import axios from "axios";
-import { NEWS_API_BASE_URL, authenticationHeader } from "./env";
+import { SALES_MANAGEMENT_API, authenticationHeader } from "./env";
 
 const getArticles = (keyword, categories = [], sources = [], authors = [], dateSort = 'newest')  => {
 
@@ -10,7 +10,7 @@ const getArticles = (keyword, categories = [], sources = [], authors = [], dateS
     dateSort
   }).toString()
 
-  return axios.get(`${NEWS_API_BASE_URL}/articles/${keyword}/search?${queryParams}`, 
+  return axios.get(`${SALES_MANAGEMENT_API}/articles/${keyword}/search?${queryParams}`, 
     { 
       headers: authenticationHeader()
     }

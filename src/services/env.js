@@ -1,4 +1,4 @@
-const NEWS_API_BASE_URL = "http://localhost:8000/v1";
+const SALES_MANAGEMENT_API = "http://localhost:8080";
 
 const authenticationHeader = () => {
 	const accessToken = localStorage.getItem("accessToken");
@@ -9,4 +9,4 @@ const authenticationHeader = () => {
 	  return {};
       }
       
-module.exports = { NEWS_API_BASE_URL, authenticationHeader } ;
+module.exports = { SALES_MANAGEMENT_API, authenticationHeader } ;

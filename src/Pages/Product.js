@@ -64,6 +64,7 @@ const Product = () => {
 
   return (
     <>
+    <h1>Product Page</h1>
     <Form onSubmit={addProduct}>
       <Row className="align-items-center">
         <Col xs={4} className="my-1">

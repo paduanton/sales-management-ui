@@ -14,6 +14,7 @@ import Feed from "./Pages/Feed";
 import Profile from "./Pages/Profile";
 import ProductType from "./Pages/ProductType";
 import Product from "./Pages/Product";
+import Sale from "./Pages/Sale";
 
 
 import { logout } from "./actions/auth";
@@ -42,19 +43,11 @@ const App = () => {
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-          {isLoggedIn ? (
-            <>
-              <Button variant="light" onClick={() => navigate("/profile")}>Profile</Button>
-              {' '}
-              <Button variant="light" onClick={() => logOut()}>Logout</Button>
-            </>
-            ) : (
-              <>
-               <Button variant="light" onClick={() => navigate("/login")}>Login</Button>
-                {' '}
-                <Button variant="light" onClick={() => navigate("/signup")}>Signup</Button>
-              </>
-            )}
+            <Button variant="light" onClick={() => navigate("/product_type")}>Product Type</Button>
+            {' '}
+            <Button variant="light" onClick={() => navigate("/product")}>Product</Button>            
+            {' '}
+            <Button variant="light" onClick={() => navigate("/sale")}>Sale</Button>
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>
@@ -62,10 +55,10 @@ const App = () => {
 
       <div className="container mt-3">
         <Routes>
-          <Route path="/" element={<Feed />} />
-          <Route path="/feed" element={<Feed />} />
+          <Route path="/" element={<Sale />} />
           <Route path="/product_type" element={<ProductType />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/sale" element={<Sale />} />
         </Routes>
       </div>
 

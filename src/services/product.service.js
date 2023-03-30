@@ -16,6 +16,8 @@ const storeProductType = (description, taxPercentage)  => {
       description,
       taxPercentage: tax_percentage,
     };
+  }).catch((response) => {
+    alert("Not able to store a product type, please review the data and try again!")
   });
 };
 
@@ -35,6 +37,8 @@ const storeProduct = (name, price, productTypeId )  => {
       price,
       productTypeId: product_type_id
     };
+  }).catch((response) => {
+    alert("Not able to store a product, please review the data and try again!")
   });
 };
 
@@ -56,6 +60,8 @@ const getProducts = ()  => {
     });
 
     return parsedProduct;
+  }).catch((response) => {
+    alert("Not able to get products, please try again!")
   });
 };
 
@@ -76,6 +82,9 @@ const getProductTypes = ()  => {
     });
 
     return parsedProductTypes;
+  })
+  .catch((response) => {
+    alert("Not able to get product types, please try again!")
   });
 };
 

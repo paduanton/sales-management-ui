@@ -19,7 +19,7 @@ export const storeProductType = (description, taxPercentage) => (dispatch) => {
 };
 
 export const storeProduct = (name, price, productTypeId )  => (dispatch) => {
-  return ProductService.storeProduct(name, price, productTypeId ) .then(
+  return ProductService.storeProduct(name, price, productTypeId ).then(
     (response) => {  
       return Promise.resolve();
     },

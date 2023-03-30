@@ -53,6 +53,7 @@ const ProductType = () => {
 
   return (
     <>
+    <h1>Product Type Page</h1>
     <Form onSubmit={addProductType}>
       <Row className="align-items-center">
         <Col xs={4} className="my-1">

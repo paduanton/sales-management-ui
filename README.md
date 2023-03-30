@@ -1,10 +1,8 @@
 # Overview
 
-News Feed is an open source project that implements a news
-aggregator website that pulls articles from various sources and displays them in a clean,
-easy-to-read format. It was developed in ReactJS and this repository is the Frontend App only, and the backend is written in Laravel and can be seen here:
+Sales Management is an open source project that implements a simple Market Sales system. It is developed in ReactJS and this repository is the Frontend App only, and the backend is written in PHP and can be seen here:
 
-[News Feed API](https://github.com/paduanton/news-feed-api)
+[Sales Management API](https://github.com/paduanton/sales-management-api)
 
 ## System Requirements (Mac OS, Windows or Linux)
 * [NodeJs 16.18](https://nodejs.org/en)
